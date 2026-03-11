@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anis HARMEL · Portfolio QGIS</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Inter + fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #f5f9fc;
+            color: #1a2b3c;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.8rem 2rem;
+        }
+
+        /* langue switch */
+        .lang-toggle {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            color: #1e3a5f;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .lang-btn.active {
+            background: #1e3a5f;
+            color: white;
+            border-color: #1e3a5f;
+        }
+
+        .lang-btn i {
+            margin-right: 6px;
+        }
+
+        /* header */
+        .header-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f0f7fd 100%);
+            border-radius: 2rem;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 12px 30px rgba(0,30,50,0.08);
+            border: 1px solid rgba(60, 130, 190, 0.15);
+        }
+
+        .name-title h1 {
+            font-size: 2.7rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #0a2942;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #2c5779;
+            margin: 0.3rem 0 1.2rem 0;
+            border-left: 5px solid #3b8fc2;
+            padding-left: 1rem;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin-top: 1.2rem;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.7);
+            padding: 0.9rem 1.5rem;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(70, 147, 197, 0.2);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #1e405e;
+        }
+
+        .contact-item i {
+            width: 1.6rem;
+            color: #1f6e9f;
+            font-size: 1.2rem;
+        }
+
+        .contact-item a {
+            color: #0b3b5c;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted transparent;
+            transition: border-color 0.15s;
+        }
+
+        .contact-item a:hover {
+            border-bottom: 1px dotted #1f6e9f;
+        }
+
+        /* intro section */
+        .intro-text {
+            background: #e6f2fa;
+            padding: 1.6rem 2rem;
+            border-radius: 1.8rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            border-left: 8px solid #2a7faa;
+            box-shadow: 0 4px 12px rgba(0,44,75,0.05);
+        }
+
+        /* projets grille */
+        .project-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.8rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0, 35, 60, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(0, 90, 140, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 35px rgba(27, 67, 108, 0.15);
+        }
+
+        .project-content {
+            padding: 2rem 2.2rem 1.2rem 2.2rem;
+        }
+
+        .project-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #0b3f5c;
+            letter-spacing: -0.01em;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.95rem;
+            color: #3f627c;
+            background: #f0f5fa;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+        }
+
+        .project-meta span i {
+            margin-right: 6px;
+            color: #1479b3;
+        }
+
+        .objective {
+            font-size: 1.08rem;
+            background: #f1f7fd;
+            padding: 1.2rem 1.5rem;
+            border-radius: 1.5rem;
+            margin: 1.2rem 0 1.5rem 0;
+            border: 1px solid #cde3f0;
+            color: #103e5a;
+            font-weight: 500;
+        }
+
+        .responsibilities {
+            margin: 1.5rem 0 1.2rem;
+        }
+
+        .resp-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .resp-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .resp-list li i {
+            color: #1f79b0;
+            font-size: 1.1rem;
+            margin-top: 3px;
+            min-width: 1.5rem;
+            text-align: center;
+        }
+
+        .tech-badge {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.4rem 0 1.2rem;
+        }
+
+        .tech-item {
+            background: #e3eef8;
+            color: #124263;
+            padding: 0.35rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #b6d3e8;
+        }
+
+        .impact {
+            background: #dff0f9;
+            padding: 1.2rem 1.6rem;
+            border-radius: 1.5rem;
+            margin: 1.2rem 0 1.8rem;
+            font-weight: 500;
+            border-left: 6px solid #197bbd;
+            color: #043753;
+        }
+
+        /* carousel */
+        .carousel-section {
+            background: #f3f9ff;
+            padding: 1rem 2rem 1.8rem;
+            border-top: 1px solid #d0e2f0;
+        }
+
+        .carousel-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #174c70;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .carousel-title i {
+            font-size: 1.5rem;
+            color: #2d7fb9;
+        }
+
+        .scrolling-wrapper {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.2rem;
+            padding: 0.6rem 0.2rem 1.2rem 0.2rem;
+            scrollbar-width: thin;
+            scrollbar-color: #8bb9d9 #e2edf6;
+            border-radius: 1.2rem;
+        }
+
+        .scrolling-wrapper::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        .scrolling-wrapper::-webkit-scrollbar-track {
+            background: #e2edf6;
+            border-radius: 20px;
+        }
+
+        .scrolling-wrapper::-webkit-scrollbar-thumb {
+            background: #8bb9d9;
+            border-radius: 20px;
+        }
+
+        .carousel-img {
+            height: 200px;
+            width: auto;
+            max-width: 320px;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 18px rgba(1, 46, 77, 0.2);
+            transition: 0.15s;
+            border: 3px solid white;
+            object-fit: cover;
+            background: #bdd8eb;
+            flex-shrink: 0;
+        }
+
+        .img-placeholder {
+            height: 200px;
+            width: 280px;
+            background: linear-gradient(145deg, #c5ddec, #b0cee6);
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #1c5779;
+            font-weight: 600;
+            border: 2px dashed #1976b3;
+            flex-shrink: 0;
+            gap: 10px;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
+        }
+
+        .img-placeholder i {
+            font-size: 2.8rem;
+            opacity: 0.7;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.8rem 0 1rem;
+            color: #4d657b;
+            border-top: 1px solid #bfd9ec;
+        }
+
+        /* lang specific hide/show */
+        .lang-fr, .lang-en {
+            transition: opacity 0.15s;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        /* responsive */
+        @media (max-width: 700px) {
+            .container { padding: 1rem; }
+            .name-title h1 { font-size: 2rem; }
+            .contact-bar { flex-direction: column; gap: 0.7rem; align-items: flex-start; border-radius: 2rem; }
+            .project-header { flex-direction: column; gap: 0.5rem; }
+            .project-meta { align-self: flex-start; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- switcher -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-fr"><i class="fas fa-language"></i> Français</button>
+        <button class="lang-btn" id="btn-en"><i class="fas fa-language"></i> English</button>
+    </div>
+
+    <!-- en-tête bilingue caché? non, on va dupliquer en data, mais on gère via les classes -->
+    <!-- HEADER FR -->
+    <div class="header-card lang-fr">
+        <div class="name-title">
+            <h1>Anis HARMEL</h1>
+            <div class="subhead">Expert SIG & Géomatique | Eau & Assainissement</div>
+        </div>
+        <div class="contact-bar">
+            <div class="contact-item"><i class="fas fa-phone-alt"></i> (+216) 56555214</div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Tunis, Tunisie</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:anis.7armel@gmail.com">anis.7armel@gmail.com</a></div>
+            <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/anisharmel" target="_blank">linkedin.com/in/anisharmel</a></div>
+        </div>
+    </div>
+    <!-- HEADER EN -->
+    <div class="header-card lang-en lang-hidden">
+        <div class="name-title">
+            <h1>Anis HARMEL</h1>
+            <div class="subhead">Expert in GIS & Geomatics | Water & Sanitation</div>
+        </div>
+        <div class="contact-bar">
+            <div class="contact-item"><i class="fas fa-phone-alt"></i> (+216) 56555214</div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Tunis, Tunisia</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:anis.7armel@gmail.com">anis.7armel@gmail.com</a></div>
+            <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/anisharmel" target="_blank">linkedin.com/in/anisharmel</a></div>
+        </div>
+    </div>
+
+    <!-- intro texte FR/EN -->
+    <div class="intro-text lang-fr">
+        <i class="fas fa-map" style="margin-right: 12px; color: #1b6a9e;"></i> Ce portfolio présente les projets clés SIG que j'ai dirigés, principalement avec QGIS et les technologies open-source. Avec plus de 17 ans d'expérience, dont Chef du Service SIG à l'ONAS, mon travail se concentre sur les infrastructures de données spatiales, la cartographie innovante et la prise de décision dans l'eau et l'assainissement.
+    </div>
+    <div class="intro-text lang-en lang-hidden">
+        <i class="fas fa-map" style="margin-right: 12px; color: #1b6a9e;"></i> This portfolio showcases key GIS projects I led, primarily using QGIS and open-source geospatial technologies. With 17+ years of experience, including Head of GIS at ONAS, my work focuses on spatial data infrastructures, innovative mapping, and decision-making in water & sanitation.
+    </div>
+
+    <!-- PROJETS : 3 CARTES avec GALLERIES -->
+    <div class="project-grid">
+
+        <!-- PROJET 1 : National Sanitation Network -->
+        <div class="project-card">
+            <div class="project-content">
+                <!-- FR -->
+                <div class="lang-fr">
+                    <div class="project-header">
+                        <span class="project-title">📌 Intégration SIG du Réseau National d'Assainissement</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mars 2014 – Présent</span><span><i class="fas fa-user-tie"></i> Chef Service SIG</span></div>
+                    </div>
+                    <div class="objective"><i class="fas fa-bullseye" style="margin-right: 12px;"></i> Établir un SIG complet et unifié pour le réseau national d'assainissement (conduites, stations, épuration).</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-database"></i> Acquisition/intégration de données : numérisation, nettoyage, validation.</li>
+                        <li><i class="fas fa-project-diagram"></i> Conception base PostgreSQL/PostGIS, gestion de la qualité.</li>
+                        <li><i class="fas fa-map-marked-alt"></i> Organisation de levés topographiques.</li>
+                        <li><i class="fas fa-code"></i> Modèles PyQGIS pour automatisation et cartographie thématique.</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> Formation de 50+ utilisateurs, culture géomatique.</li>
+                    </ul>
+                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">PyQGIS</span><span class="tech-item">AutoCAD</span><span class="tech-item">Mensura Genius</span></div>
+                    <div class="impact"><i class="fas fa-chart-line"></i> Impact : amélioration de l'efficacité, coûts réduits, planification optimisée.</div>
+                </div>
+                <!-- EN -->
+                <div class="lang-en lang-hidden">
+                    <div class="project-header">
+                        <span class="project-title">📌 National Sanitation Network GIS Integration</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mar 2014 – Present</span><span><i class="fas fa-user-tie"></i> Head of GIS</span></div>
+                    </div>
+                    <div class="objective"><i class="fas fa-bullseye" style="margin-right: 12px;"></i> Establish unified GIS for national sanitation network (pipes, pumping stations, treatment plants).</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-database"></i> Data acquisition/integration: digitizing, cleaning, validation.</li>
+                        <li><i class="fas fa-project-diagram"></i> PostgreSQL/PostGIS design, data quality assurance.</li>
+                        <li><i class="fas fa-map-marked-alt"></i> Topographic survey coordination.</li>
+                        <li><i class="fas fa-code"></i> PyQGIS models/scripts for automation & thematic maps.</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> Trained 50+ users, promoted geomatics culture.</li>
+                    </ul>
+                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">PyQGIS</span><span class="tech-item">AutoCAD</span><span class="tech-item">Mensura Genius</span></div>
+                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: efficiency gain, reduced costs, optimized maintenance.</div>
+                </div>
+            </div>
+            <!-- carousel commun (images factices) -->
+            <div class="carousel-section">
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus du projet</span><span class="lang-en lang-hidden">Project snapshots</span></div>
+                <div class="scrolling-wrapper">
+                    <img class="carousel-img" src="images/projet1/094723.png" alt="capture">
+                    <img class="carousel-img" src="images/projet1/093417.png" alt="capture">
+                    <img class="carousel-img" src="images/projet1/093332.png" alt="capture">
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJET 2 : Mobile Subscriber Collection -->
+        <div class="project-card">
+            <div class="project-content">
+                <!-- FR -->
+                <div class="lang-fr">
+                    <div class="project-header">
+                        <span class="project-title">📱 Application Mobile – Collecte Abonnés ONAS</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Déc 2023 – Mars 2024</span><span><i class="fas fa-user-cog"></i> Chef SIG / Développeur</span></div>
+                    </div>
+                    <div class="objective"><i class="fas fa-bullseye"></i> Développer une app mobile pour géolocaliser et collecter les données des abonnés (codes activité, coefficients pollution).</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-mobile-alt"></i> Conception QField / QGIS pour la saisie terrain.</li>
+                        <li><i class="fas fa-wpforms"></i> Formulaires dynamiques dans QField adaptés à la base existante.</li>
+                        <li><i class="fas fa-exchange-alt"></i> Workflows QML/JavaScript, synchronisation QFieldSync.</li>
+                        <li><i class="fas fa-database"></i> Gestion SQLite et synchronisation avec la base centrale.</li>
+                    </ul>
+                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span><span class="tech-item">QML/JS</span><span class="tech-item">QFieldSync</span></div>
+                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: collecte rationalisée, précision améliorée, facturation plus juste.</div>
+                </div>
+                <!-- EN -->
+                <div class="lang-en lang-hidden">
+                    <div class="project-header">
+                        <span class="project-title">📱 Mobile App – ONAS Subscriber Data Collection</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Dec 2023 – Mar 2024</span><span><i class="fas fa-user-cog"></i> Head of GIS / Dev</span></div>
+                    </div>
+                    <div class="objective"><i class="fas fa-bullseye"></i> Develop mobile app to geolocate and collect subscriber data (activity codes, pollution coefficients).</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-mobile-alt"></i> QField/QGIS design for field data capture.</li>
+                        <li><i class="fas fa-wpforms"></i> Dynamic QField forms adapted to existing database.</li>
+                        <li><i class="fas fa-exchange-alt"></i> QML/JavaScript workflows, sync via QFieldSync.</li>
+                        <li><i class="fas fa-database"></i> SQLite management & synchronization with central DB.</li>
+                    </ul>
+                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span><span class="tech-item">QML/JS</span><span class="tech-item">QFieldSync</span></div>
+                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: streamlined collection, improved accuracy, better billing.</div>
+                </div>
+            </div>
+            <div class="carousel-section">
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus terrain</span><span class="lang-en lang-hidden">Field snapshots</span></div>
+                <div class="scrolling-wrapper">
+                    <img class="carousel-img" src="images/projet2/qf1.png" alt="capture">
+                    <img class="carousel-img" src="images/projet2/qf2.png" alt="capture">
+					<img class="carousel-img" src="images/projet2/qf3.png" alt="capture">
+					<img class="carousel-img" src="images/projet2/qf4.png" alt="capture">
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJET 3 : Épidémiologie / Web mapping -->
+        <div class="project-card">
+            <div class="project-content">
+                <!-- FR -->
+                <div class="lang-fr">
+                    <div class="project-header">
+                        <span class="project-title">🦠 Suivi Épidémiologique (Lizmap)</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Sept 2022 – Fév 2023</span><span><i class="fas fa-user-nurse"></i> Chef SIG / Développeur</span></div>
+                    </div>
+                    <div class="objective"><i class="fas fa-bullseye"></i> Application cartographique web pour localiser la présence bactérienne dans les eaux usées (analyses STEP/station de pompage).</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-globe"></i> Développement Lizmap, serveur QGIS Server, plugin Lizmap.</li>
+                        <li><i class="fas fa-server"></i> Stockage PostGIS, récupération efficace.</li>
+                        <li><i class="fas fa-filter"></i> Filtrage dynamique et visualisation des données épidémiologiques.</li>
+                        <li><i class="fas fa-handshake"></i> Collaboration Ministère Santé/Agriculture.</li>
+                    </ul>
+                    <div class="tech-badge"><span class="tech-item">Lizmap</span><span class="tech-item">QGIS Server</span><span class="tech-item">PostGIS</span><span class="tech-item">OpenLayers</span></div>
+                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: outil crucial pour la surveillance sanitaire, réponse rapide aux risques.</div>
+                </div>
+                <!-- EN -->
+                <div class="lang-en lang-hidden">
+                    <div class="project-header">
+                        <span class="project-title">🦠 Epidemiological Monitoring (Lizmap)</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Sep 2022 – Feb 2023</span><span><i class="fas fa-user-nurse"></i> Head of GIS / Dev</span></div>
+                    </div>
+                    <div class="objective"><i class="fas fa-bullseye"></i> Web mapping app to locate potential bacterial presence in wastewater (treatment plant/pumping station analysis).</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-globe"></i> Lizmap development, QGIS Server, Lizmap plugin.</li>
+                        <li><i class="fas fa-server"></i> PostGIS storage, efficient data retrieval.</li>
+                        <li><i class="fas fa-filter"></i> Dynamic filtering and epidemiological visualization.</li>
+                        <li><i class="fas fa-handshake"></i> Collaboration with Health & Agriculture ministries.</li>
+                    </ul>
+                    <div class="tech-badge"><span class="tech-item">Lizmap</span><span class="tech-item">QGIS Server</span><span class="tech-item">PostGIS</span><span class="tech-item">OpenLayers</span></div>
+                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: crucial public health tool, rapid risk response.</div>
+                </div>
+            </div>
+            <div class="carousel-section">
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Visualisations web</span><span class="lang-en lang-hidden">Web views</span></div>
+                <div class="scrolling-wrapper">
+                    <img class="carousel-img" src="images/projet3/100901.png" alt="capture">
+					<img class="carousel-img" src="images/projet3/100730.png" alt="capture">
+					<img class="carousel-img" src="images/projet3/100523.png" alt="capture">
+					<img class="carousel-img" src="images/projet3/100323.png" alt="capture">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer bilingue -->
+    <div class="footer-note lang-fr">
+        <i class="fas fa-copyright"></i> Anis HARMEL – Portfolio QGIS · données de projets réels · les visuels sont des placeholders illustratifs.
+    </div>
+    <div class="footer-note lang-en lang-hidden">
+        <i class="fas fa-copyright"></i> Anis HARMEL – QGIS Portfolio · real project data · visuals are illustrative placeholders.
+    </div>
+</div>
+
+<!-- simple lang switch -->
+<script>
+    (function() {
+        const btnFr = document.getElementById('btn-fr');
+        const btnEn = document.getElementById('btn-en');
+        const langFrElements = document.querySelectorAll('.lang-fr');
+        const langEnElements = document.querySelectorAll('.lang-en');
+
+        function setLanguage(lang) {
+            if (lang === 'fr') {
+                langFrElements.forEach(el => el.classList.remove('lang-hidden'));
+                langEnElements.forEach(el => el.classList.add('lang-hidden'));
+                btnFr.classList.add('active');
+                btnEn.classList.remove('active');
+            } else {
+                langFrElements.forEach(el => el.classList.add('lang-hidden'));
+                langEnElements.forEach(el => el.classList.remove('lang-hidden'));
+                btnEn.classList.add('active');
+                btnFr.classList.remove('active');
+            }
+        }
+
+        btnFr.addEventListener('click', () => setLanguage('fr'));
+        btnEn.addEventListener('click', () => setLanguage('en'));
+
+        // détection navigateur simple ? on laisse français par défaut (déjà actif)
+        // mais si l'utilisateur a le navigateur en anglais on peut switcher?
+        // optionnel : 
+        const browserLang = (navigator.language || navigator.userLanguage).substring(0,2);
+        if (browserLang === 'en') setLanguage('en');
+    })();
+</script>
+<!-- placeholder images : placecats.com (libre) ; les images réelles seront à remplacer -->
+</body>
+</html>
