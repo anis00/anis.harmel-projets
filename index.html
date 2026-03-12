@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anis HARMEL · Portfolio QGIS</title>
-    <!-- Font Awesome 6 (free) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: Inter + fallback -->
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             background: #f5f9fc;
             color: #1a2b3c;
             line-height: 1.5;
@@ -37,7 +37,6 @@
             justify-content: flex-end;
             gap: 0.75rem;
             margin-bottom: 2rem;
-            align-items: center;
         }
 
         .lang-btn {
@@ -50,17 +49,12 @@
             cursor: pointer;
             color: #1e3a5f;
             transition: all 0.2s;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .lang-btn.active {
             background: #1e3a5f;
             color: white;
             border-color: #1e3a5f;
-        }
-
-        .lang-btn i {
-            margin-right: 6px;
         }
 
         /* header */
@@ -76,7 +70,6 @@
         .name-title h1 {
             font-size: 2.7rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
             color: #0a2942;
             line-height: 1.2;
         }
@@ -95,12 +88,11 @@
             flex-wrap: wrap;
             gap: 1.8rem;
             margin-top: 1.2rem;
-            font-size: 1rem;
             background: rgba(255,255,255,0.7);
             padding: 0.9rem 1.5rem;
             border-radius: 60px;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(70, 147, 197, 0.2);
+            border: 1px solid rgba(70,147,197,0.2);
         }
 
         .contact-item {
@@ -113,7 +105,6 @@
         .contact-item i {
             width: 1.6rem;
             color: #1f6e9f;
-            font-size: 1.2rem;
         }
 
         .contact-item a {
@@ -121,14 +112,12 @@
             text-decoration: none;
             font-weight: 500;
             border-bottom: 1px dotted transparent;
-            transition: border-color 0.15s;
         }
 
         .contact-item a:hover {
             border-bottom: 1px dotted #1f6e9f;
         }
 
-        /* intro section */
         .intro-text {
             background: #e6f2fa;
             padding: 1.6rem 2rem;
@@ -136,10 +125,8 @@
             margin-bottom: 2.5rem;
             font-size: 1.1rem;
             border-left: 8px solid #2a7faa;
-            box-shadow: 0 4px 12px rgba(0,44,75,0.05);
         }
 
-        /* projets grille */
         .project-grid {
             display: flex;
             flex-direction: column;
@@ -150,14 +137,13 @@
             background: white;
             border-radius: 2rem;
             overflow: hidden;
-            box-shadow: 0 12px 28px rgba(0, 35, 60, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid rgba(0, 90, 140, 0.1);
+            box-shadow: 0 12px 28px rgba(0,35,60,0.1);
+            transition: transform 0.2s;
+            border: 1px solid rgba(0,90,140,0.1);
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 35px rgba(27, 67, 108, 0.15);
         }
 
         .project-content {
@@ -176,17 +162,16 @@
             font-size: 1.9rem;
             font-weight: 700;
             color: #0b3f5c;
-            letter-spacing: -0.01em;
         }
 
         .project-meta {
             display: flex;
             gap: 1.8rem;
-            font-size: 0.95rem;
-            color: #3f627c;
             background: #f0f5fa;
             padding: 0.4rem 1.2rem;
             border-radius: 40px;
+            font-size: 0.95rem;
+            color: #3f627c;
         }
 
         .project-meta span i {
@@ -195,18 +180,11 @@
         }
 
         .objective {
-            font-size: 1.08rem;
             background: #f1f7fd;
             padding: 1.2rem 1.5rem;
             border-radius: 1.5rem;
             margin: 1.2rem 0 1.5rem 0;
             border: 1px solid #cde3f0;
-            color: #103e5a;
-            font-weight: 500;
-        }
-
-        .responsibilities {
-            margin: 1.5rem 0 1.2rem;
         }
 
         .resp-list {
@@ -225,7 +203,6 @@
         .resp-list li i {
             color: #1f79b0;
             font-size: 1.1rem;
-            margin-top: 3px;
             min-width: 1.5rem;
             text-align: center;
         }
@@ -244,7 +221,6 @@
             border-radius: 30px;
             font-size: 0.9rem;
             font-weight: 600;
-            border: 1px solid #b6d3e8;
         }
 
         .impact {
@@ -252,9 +228,7 @@
             padding: 1.2rem 1.6rem;
             border-radius: 1.5rem;
             margin: 1.2rem 0 1.8rem;
-            font-weight: 500;
             border-left: 6px solid #197bbd;
-            color: #043753;
         }
 
         /* carousel */
@@ -274,11 +248,6 @@
             gap: 12px;
         }
 
-        .carousel-title i {
-            font-size: 1.5rem;
-            color: #2d7fb9;
-        }
-
         .scrolling-wrapper {
             display: flex;
             overflow-x: auto;
@@ -286,34 +255,37 @@
             padding: 0.6rem 0.2rem 1.2rem 0.2rem;
             scrollbar-width: thin;
             scrollbar-color: #8bb9d9 #e2edf6;
-            border-radius: 1.2rem;
         }
 
         .scrolling-wrapper::-webkit-scrollbar {
             height: 10px;
         }
-
         .scrolling-wrapper::-webkit-scrollbar-track {
             background: #e2edf6;
             border-radius: 20px;
         }
-
         .scrolling-wrapper::-webkit-scrollbar-thumb {
             background: #8bb9d9;
             border-radius: 20px;
         }
 
+        /* images cliquables style */
         .carousel-img {
             height: 200px;
             width: auto;
             max-width: 320px;
             border-radius: 1.5rem;
-            box-shadow: 0 8px 18px rgba(1, 46, 77, 0.2);
-            transition: 0.15s;
+            box-shadow: 0 8px 18px rgba(1,46,77,0.2);
             border: 3px solid white;
             object-fit: cover;
-            background: #bdd8eb;
             flex-shrink: 0;
+            cursor: pointer;
+            transition: filter 0.2s, transform 0.2s;
+        }
+
+        .carousel-img:hover {
+            filter: brightness(0.95);
+            transform: scale(1.02);
         }
 
         .img-placeholder {
@@ -330,14 +302,71 @@
             border: 2px dashed #1976b3;
             flex-shrink: 0;
             gap: 10px;
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
+            cursor: pointer;
         }
 
-        .img-placeholder i {
-            font-size: 2.8rem;
-            opacity: 0.7;
+        /* lightbox */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(6px);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s;
         }
 
+        .lightbox-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-content {
+            max-width: min(90vw, 1200px);
+            max-height: 90vh;
+            border-radius: 2rem;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            border: 4px solid white;
+            object-fit: contain;
+            background: white;
+            transform: scale(0.9);
+            transition: transform 0.25s;
+            cursor: default;
+        }
+
+        .lightbox-overlay.active .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            font-size: 2.5rem;
+            color: white;
+            background: rgba(0,0,0,0.3);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.2s;
+            border: none;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(180, 0, 0, 0.7);
+            transform: scale(1.1);
+        }
+
+        /* footer + lang switch */
         .footer-note {
             text-align: center;
             margin-top: 3rem;
@@ -346,22 +375,14 @@
             border-top: 1px solid #bfd9ec;
         }
 
-        /* lang specific hide/show */
-        .lang-fr, .lang-en {
-            transition: opacity 0.15s;
-        }
-
         .lang-hidden {
             display: none !important;
         }
 
-        /* responsive */
         @media (max-width: 700px) {
             .container { padding: 1rem; }
             .name-title h1 { font-size: 2rem; }
-            .contact-bar { flex-direction: column; gap: 0.7rem; align-items: flex-start; border-radius: 2rem; }
-            .project-header { flex-direction: column; gap: 0.5rem; }
-            .project-meta { align-self: flex-start; }
+            .contact-bar { flex-direction: column; }
         }
     </style>
 </head>
@@ -374,13 +395,9 @@
         <button class="lang-btn" id="btn-en"><i class="fas fa-language"></i> English</button>
     </div>
 
-    <!-- en-tête bilingue caché? non, on va dupliquer en data, mais on gère via les classes -->
     <!-- HEADER FR -->
     <div class="header-card lang-fr">
-        <div class="name-title">
-            <h1>Anis HARMEL</h1>
-            <div class="subhead">Expert SIG & Géomatique | Eau & Assainissement</div>
-        </div>
+        <div class="name-title"><h1>Anis HARMEL</h1><div class="subhead">Expert SIG & Géomatique | Eau & Assainissement</div></div>
         <div class="contact-bar">
             <div class="contact-item"><i class="fas fa-phone-alt"></i> (+216) 56555214</div>
             <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Tunis, Tunisie</div>
@@ -390,10 +407,7 @@
     </div>
     <!-- HEADER EN -->
     <div class="header-card lang-en lang-hidden">
-        <div class="name-title">
-            <h1>Anis HARMEL</h1>
-            <div class="subhead">Expert in GIS & Geomatics | Water & Sanitation</div>
-        </div>
+        <div class="name-title"><h1>Anis HARMEL</h1><div class="subhead">Expert in GIS & Geomatics | Water & Sanitation</div></div>
         <div class="contact-bar">
             <div class="contact-item"><i class="fas fa-phone-alt"></i> (+216) 56555214</div>
             <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Tunis, Tunisia</div>
@@ -402,202 +416,177 @@
         </div>
     </div>
 
-    <!-- intro texte FR/EN -->
-    <div class="intro-text lang-fr">
-        <i class="fas fa-map" style="margin-right: 12px; color: #1b6a9e;"></i> Ce portfolio présente les projets clés SIG que j'ai dirigés, principalement avec QGIS et les technologies open-source. Avec plus de 17 ans d'expérience, dont Chef du Service SIG à l'ONAS, mon travail se concentre sur les infrastructures de données spatiales, la cartographie innovante et la prise de décision dans l'eau et l'assainissement.
-    </div>
-    <div class="intro-text lang-en lang-hidden">
-        <i class="fas fa-map" style="margin-right: 12px; color: #1b6a9e;"></i> This portfolio showcases key GIS projects I led, primarily using QGIS and open-source geospatial technologies. With 17+ years of experience, including Head of GIS at ONAS, my work focuses on spatial data infrastructures, innovative mapping, and decision-making in water & sanitation.
-    </div>
+    <!-- intro FR/EN -->
+    <div class="intro-text lang-fr"><i class="fas fa-map" style="margin-right:12px;color:#1b6a9e;"></i> Ce portfolio présente les projets clés SIG que j'ai dirigés, principalement avec QGIS et les technologies open-source. Plus de 17 ans d'expérience, dont Chef du Service SIG à l'ONAS.</div>
+    <div class="intro-text lang-en lang-hidden"><i class="fas fa-map" style="margin-right:12px;color:#1b6a9e;"></i> This portfolio showcases key GIS projects I led, primarily using QGIS and open-source technologies. 17+ years of experience, including Head of GIS at ONAS.</div>
 
-    <!-- PROJETS : 3 CARTES avec GALLERIES -->
+    <!-- PROJETS  -->
     <div class="project-grid">
 
-        <!-- PROJET 1 : National Sanitation Network -->
+        <!-- PROJET 1 -->
         <div class="project-card">
             <div class="project-content">
                 <!-- FR -->
                 <div class="lang-fr">
-                    <div class="project-header">
-                        <span class="project-title">📌 Intégration SIG du Réseau National d'Assainissement</span>
-                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mars 2014 – Présent</span><span><i class="fas fa-user-tie"></i> Chef Service SIG</span></div>
-                    </div>
-                    <div class="objective"><i class="fas fa-bullseye" style="margin-right: 12px;"></i> Établir un SIG complet et unifié pour le réseau national d'assainissement (conduites, stations, épuration).</div>
-                    <ul class="resp-list">
-                        <li><i class="fas fa-database"></i> Acquisition/intégration de données : numérisation, nettoyage, validation.</li>
-                        <li><i class="fas fa-project-diagram"></i> Conception base PostgreSQL/PostGIS, gestion de la qualité.</li>
-                        <li><i class="fas fa-map-marked-alt"></i> Organisation de levés topographiques.</li>
-                        <li><i class="fas fa-code"></i> Modèles PyQGIS pour automatisation et cartographie thématique.</li>
-                        <li><i class="fas fa-chalkboard-teacher"></i> Formation de 50+ utilisateurs, culture géomatique.</li>
-                    </ul>
-                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">PyQGIS</span><span class="tech-item">AutoCAD</span><span class="tech-item">Mensura Genius</span></div>
-                    <div class="impact"><i class="fas fa-chart-line"></i> Impact : amélioration de l'efficacité, coûts réduits, planification optimisée.</div>
+                    <div class="project-header"><span class="project-title">📌 Intégration SIG du Réseau National</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mars 2014 – Présent</span><span><i class="fas fa-user-tie"></i> Chef Service SIG</span></div></div>
+                    <div class="objective"><i class="fas fa-bullseye" style="margin-right:12px;"></i> Établir un SIG complet pour le réseau national d'assainissement.</div>
+                    <ul class="resp-list"><li><i class="fas fa-database"></i> Acquisition/intégration, nettoyage, validation.</li><li><i class="fas fa-project-diagram"></i> Conception PostgreSQL/PostGIS.</li><li><i class="fas fa-map-marked-alt"></i> Organisation de levés topographiques.</li><li><i class="fas fa-code"></i> Modèles PyQGIS pour automatisation.</li><li><i class="fas fa-chalkboard-teacher"></i> Formation 50+ utilisateurs.</li></ul>
+                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">PyQGIS</span><span class="tech-item">AutoCAD</span></div>
+                    <div class="impact"><i class="fas fa-chart-line"></i> Impact : efficacité, coûts réduits, planification optimisée.</div>
                 </div>
                 <!-- EN -->
                 <div class="lang-en lang-hidden">
-                    <div class="project-header">
-                        <span class="project-title">📌 National Sanitation Network GIS Integration</span>
-                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mar 2014 – Present</span><span><i class="fas fa-user-tie"></i> Head of GIS</span></div>
-                    </div>
-                    <div class="objective"><i class="fas fa-bullseye" style="margin-right: 12px;"></i> Establish unified GIS for national sanitation network (pipes, pumping stations, treatment plants).</div>
-                    <ul class="resp-list">
-                        <li><i class="fas fa-database"></i> Data acquisition/integration: digitizing, cleaning, validation.</li>
-                        <li><i class="fas fa-project-diagram"></i> PostgreSQL/PostGIS design, data quality assurance.</li>
-                        <li><i class="fas fa-map-marked-alt"></i> Topographic survey coordination.</li>
-                        <li><i class="fas fa-code"></i> PyQGIS models/scripts for automation & thematic maps.</li>
-                        <li><i class="fas fa-chalkboard-teacher"></i> Trained 50+ users, promoted geomatics culture.</li>
-                    </ul>
-                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">PyQGIS</span><span class="tech-item">AutoCAD</span><span class="tech-item">Mensura Genius</span></div>
-                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: efficiency gain, reduced costs, optimized maintenance.</div>
+                    <div class="project-header"><span class="project-title">📌 National Sanitation Network GIS</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mar 2014 – Present</span><span><i class="fas fa-user-tie"></i> Head of GIS</span></div></div>
+                    <div class="objective"><i class="fas fa-bullseye"></i> Unified GIS for national sanitation network.</div>
+                    <ul class="resp-list"><li><i class="fas fa-database"></i> Data acquisition, cleaning, validation.</li><li><i class="fas fa-project-diagram"></i> PostgreSQL/PostGIS design.</li><li><i class="fas fa-map-marked-alt"></i> Topographic surveys.</li><li><i class="fas fa-code"></i> PyQGIS automation.</li><li><i class="fas fa-chalkboard-teacher"></i> Trained 50+ users.</li></ul>
+                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">PyQGIS</span><span class="tech-item">AutoCAD</span></div>
+                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: efficiency, reduced costs.</div>
                 </div>
             </div>
-            <!-- carousel commun (images factices) -->
+            <!-- carousel 1 : toutes les images sont cliquables -->
             <div class="carousel-section">
-                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus du projet</span><span class="lang-en lang-hidden">Project snapshots</span></div>
-                <div class="scrolling-wrapper">
-                    <img class="carousel-img" src="images/projet1/094723.png" alt="capture">
-                    <img class="carousel-img" src="images/projet1/093417.png" alt="capture">
-                    <img class="carousel-img" src="images/projet1/093332.png" alt="capture">
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus du projet</span><span class="lang-en lang-hidden">Snapshots</span></div>
+                <div class="scrolling-wrapper" data-project="1">
+                    <img class="carousel-img" src="images/projet1/094723.jpg" alt="capture">
+                    <img class="carousel-img" src="images/projet1/093417.jpg" alt="capture">
+                    <img class="carousel-img" src="images/projet1/093332.jpg" alt="capture">
                 </div>
             </div>
         </div>
 
-        <!-- PROJET 2 : Mobile Subscriber Collection -->
+        <!-- PROJET 2 : mobile -->
         <div class="project-card">
             <div class="project-content">
-                <!-- FR -->
                 <div class="lang-fr">
-                    <div class="project-header">
-                        <span class="project-title">📱 Application Mobile – Collecte Abonnés ONAS</span>
-                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Déc 2023 – Mars 2024</span><span><i class="fas fa-user-cog"></i> Chef SIG / Développeur</span></div>
-                    </div>
-                    <div class="objective"><i class="fas fa-bullseye"></i> Développer une app mobile pour géolocaliser et collecter les données des abonnés (codes activité, coefficients pollution).</div>
-                    <ul class="resp-list">
-                        <li><i class="fas fa-mobile-alt"></i> Conception QField / QGIS pour la saisie terrain.</li>
-                        <li><i class="fas fa-wpforms"></i> Formulaires dynamiques dans QField adaptés à la base existante.</li>
-                        <li><i class="fas fa-exchange-alt"></i> Workflows QML/JavaScript, synchronisation QFieldSync.</li>
-                        <li><i class="fas fa-database"></i> Gestion SQLite et synchronisation avec la base centrale.</li>
-                    </ul>
-                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span><span class="tech-item">QML/JS</span><span class="tech-item">QFieldSync</span></div>
-                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: collecte rationalisée, précision améliorée, facturation plus juste.</div>
+                    <div class="project-header"><span class="project-title">📱 Application Mobile – Collecte Abonnés</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Déc 2023 – Mars 2024</span><span><i class="fas fa-user-cog"></i> Chef SIG / Dev</span></div></div>
+                    <div class="objective">Développer une app mobile pour géolocaliser les données abonnés (codes activité, pollution).</div>
+                    <ul class="resp-list"><li><i class="fas fa-mobile-alt"></i> Conception QField / QGIS.</li><li><i class="fas fa-wpforms"></i> Formulaires dynamiques.</li><li><i class="fas fa-exchange-alt"></i> Workflows QML/JS, QFieldSync.</li><li><i class="fas fa-database"></i> Gestion SQLite.</li></ul>
+                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span><span class="tech-item">QML/JS</span></div>
+                    <div class="impact">Impact: collecte rationalisée, précision améliorée.</div>
                 </div>
-                <!-- EN -->
                 <div class="lang-en lang-hidden">
-                    <div class="project-header">
-                        <span class="project-title">📱 Mobile App – ONAS Subscriber Data Collection</span>
-                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Dec 2023 – Mar 2024</span><span><i class="fas fa-user-cog"></i> Head of GIS / Dev</span></div>
-                    </div>
-                    <div class="objective"><i class="fas fa-bullseye"></i> Develop mobile app to geolocate and collect subscriber data (activity codes, pollution coefficients).</div>
-                    <ul class="resp-list">
-                        <li><i class="fas fa-mobile-alt"></i> QField/QGIS design for field data capture.</li>
-                        <li><i class="fas fa-wpforms"></i> Dynamic QField forms adapted to existing database.</li>
-                        <li><i class="fas fa-exchange-alt"></i> QML/JavaScript workflows, sync via QFieldSync.</li>
-                        <li><i class="fas fa-database"></i> SQLite management & synchronization with central DB.</li>
-                    </ul>
-                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span><span class="tech-item">QML/JS</span><span class="tech-item">QFieldSync</span></div>
-                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: streamlined collection, improved accuracy, better billing.</div>
+                    <div class="project-header"><span class="project-title">📱 Mobile Subscriber Collection</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Dec 2023 – Mar 2024</span><span><i class="fas fa-user-cog"></i> Head of GIS / Dev</span></div></div>
+                    <div class="objective">Mobile app to geolocate subscriber data.</div>
+                    <ul class="resp-list"><li><i class="fas fa-mobile-alt"></i> QField / QGIS design.</li><li><i class="fas fa-wpforms"></i> Dynamic forms.</li><li><i class="fas fa-exchange-alt"></i> QML/JS, QFieldSync.</li><li><i class="fas fa-database"></i> SQLite management.</li></ul>
+                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span><span class="tech-item">QML/JS</span></div>
+                    <div class="impact">Impact: streamlined collection, accuracy.</div>
                 </div>
             </div>
             <div class="carousel-section">
-                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus terrain</span><span class="lang-en lang-hidden">Field snapshots</span></div>
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus terrain</span><span class="lang-en lang-hidden">Field views</span></div>
                 <div class="scrolling-wrapper">
-                    <img class="carousel-img" src="images/projet2/qf1.png" alt="capture">
-                    <img class="carousel-img" src="images/projet2/qf2.png" alt="capture">
-					<img class="carousel-img" src="images/projet2/qf3.png" alt="capture">
-					<img class="carousel-img" src="images/projet2/qf4.png" alt="capture">
+                    <img class="carousel-img" src="images/projet2/qf1.jpg" alt="capture">
+                    <img class="carousel-img" src="images/projet2/qf2.jpg" alt="capture">
+					<img class="carousel-img" src="images/projet2/qf3.jpg" alt="capture">
+					<img class="carousel-img" src="images/projet2/qf4.jpg" alt="capture">
+					<img class="carousel-img" src="images/projet2/qf5.jpg" alt="capture">
                 </div>
             </div>
         </div>
 
-        <!-- PROJET 3 : Épidémiologie / Web mapping -->
+        <!-- PROJET 3 : Web mapping -->
         <div class="project-card">
             <div class="project-content">
-                <!-- FR -->
                 <div class="lang-fr">
-                    <div class="project-header">
-                        <span class="project-title">🦠 Suivi Épidémiologique (Lizmap)</span>
-                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Sept 2022 – Fév 2023</span><span><i class="fas fa-user-nurse"></i> Chef SIG / Développeur</span></div>
-                    </div>
-                    <div class="objective"><i class="fas fa-bullseye"></i> Application cartographique web pour localiser la présence bactérienne dans les eaux usées (analyses STEP/station de pompage).</div>
-                    <ul class="resp-list">
-                        <li><i class="fas fa-globe"></i> Développement Lizmap, serveur QGIS Server, plugin Lizmap.</li>
-                        <li><i class="fas fa-server"></i> Stockage PostGIS, récupération efficace.</li>
-                        <li><i class="fas fa-filter"></i> Filtrage dynamique et visualisation des données épidémiologiques.</li>
-                        <li><i class="fas fa-handshake"></i> Collaboration Ministère Santé/Agriculture.</li>
-                    </ul>
+                    <div class="project-header"><span class="project-title">🦠 Suivi Épidémiologique (Lizmap)</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Sept 2022 – Fév 2023</span><span><i class="fas fa-user-nurse"></i> Chef SIG / Dev</span></div></div>
+                    <div class="objective">Application web pour localiser présence bactérienne (analyses STEP).</div>
+                    <ul class="resp-list"><li><i class="fas fa-globe"></i> Développement Lizmap, QGIS Server.</li><li><i class="fas fa-server"></i> PostGIS.</li><li><i class="fas fa-filter"></i> Filtrage dynamique.</li><li><i class="fas fa-handshake"></i> Ministères Santé/Agriculture.</li></ul>
                     <div class="tech-badge"><span class="tech-item">Lizmap</span><span class="tech-item">QGIS Server</span><span class="tech-item">PostGIS</span><span class="tech-item">OpenLayers</span></div>
-                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: outil crucial pour la surveillance sanitaire, réponse rapide aux risques.</div>
+                    <div class="impact">Impact: outil de surveillance sanitaire.</div>
                 </div>
-                <!-- EN -->
                 <div class="lang-en lang-hidden">
-                    <div class="project-header">
-                        <span class="project-title">🦠 Epidemiological Monitoring (Lizmap)</span>
-                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Sep 2022 – Feb 2023</span><span><i class="fas fa-user-nurse"></i> Head of GIS / Dev</span></div>
-                    </div>
-                    <div class="objective"><i class="fas fa-bullseye"></i> Web mapping app to locate potential bacterial presence in wastewater (treatment plant/pumping station analysis).</div>
-                    <ul class="resp-list">
-                        <li><i class="fas fa-globe"></i> Lizmap development, QGIS Server, Lizmap plugin.</li>
-                        <li><i class="fas fa-server"></i> PostGIS storage, efficient data retrieval.</li>
-                        <li><i class="fas fa-filter"></i> Dynamic filtering and epidemiological visualization.</li>
-                        <li><i class="fas fa-handshake"></i> Collaboration with Health & Agriculture ministries.</li>
-                    </ul>
+                    <div class="project-header"><span class="project-title">🦠 Epidemiological Monitoring</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Sep 2022 – Feb 2023</span><span><i class="fas fa-user-nurse"></i> Head of GIS / Dev</span></div></div>
+                    <div class="objective">Web app to track bacterial presence (wastewater).</div>
+                    <ul class="resp-list"><li><i class="fas fa-globe"></i> Lizmap, QGIS Server.</li><li><i class="fas fa-server"></i> PostGIS.</li><li><i class="fas fa-filter"></i> Dynamic filtering.</li><li><i class="fas fa-handshake"></i> Ministries collaboration.</li></ul>
                     <div class="tech-badge"><span class="tech-item">Lizmap</span><span class="tech-item">QGIS Server</span><span class="tech-item">PostGIS</span><span class="tech-item">OpenLayers</span></div>
-                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: crucial public health tool, rapid risk response.</div>
+                    <div class="impact">Impact: public health monitoring.</div>
                 </div>
             </div>
             <div class="carousel-section">
                 <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Visualisations web</span><span class="lang-en lang-hidden">Web views</span></div>
                 <div class="scrolling-wrapper">
-                    <img class="carousel-img" src="images/projet3/100901.png" alt="capture">
-					<img class="carousel-img" src="images/projet3/100730.png" alt="capture">
-					<img class="carousel-img" src="images/projet3/100523.png" alt="capture">
-					<img class="carousel-img" src="images/projet3/100323.png" alt="capture">
+                    <img class="carousel-img" src="images/projet3/100901.jpg" alt="capture">
+					<img class="carousel-img" src="images/projet3/100730.jpg" alt="capture">
+					<img class="carousel-img" src="images/projet3/100523.jpg" alt="capture">
+					<img class="carousel-img" src="images/projet3/100323.jpg" alt="capture">
                 </div>
             </div>
         </div>
     </div>
 
     <!-- footer bilingue -->
-    <div class="footer-note lang-fr">
-        <i class="fas fa-copyright"></i> Anis HARMEL – Portfolio QGIS · données de projets réels · les visuels sont des placeholders illustratifs.
-    </div>
-    <div class="footer-note lang-en lang-hidden">
-        <i class="fas fa-copyright"></i> Anis HARMEL – QGIS Portfolio · real project data · visuals are illustrative placeholders.
-    </div>
+    <div class="footer-note lang-fr"><i class="fas fa-copyright"></i> Anis HARMEL – Portfolio QGIS · images cliquables pour agrandir</div>
+    <div class="footer-note lang-en lang-hidden"><i class="fas fa-copyright"></i> Anis HARMEL – QGIS Portfolio · click images to enlarge</div>
 </div>
 
-<!-- simple lang switch -->
+<!-- LIGHTBOX HTML -->
+<div id="lightbox" class="lightbox-overlay" onclick="lightboxClose(event)">
+    <img id="lightbox-img" class="lightbox-content" src="" alt="">
+    <div class="lightbox-close" onclick="lightboxClose(event)"><i class="fas fa-times"></i></div>
+</div>
+
+<!-- SCRIPT : langue + lightbox -->
 <script>
-    (function() {
-        const btnFr = document.getElementById('btn-fr');
-        const btnEn = document.getElementById('btn-en');
-        const langFrElements = document.querySelectorAll('.lang-fr');
-        const langEnElements = document.querySelectorAll('.lang-en');
+    // ---------- langue ----------
+    const btnFr = document.getElementById('btn-fr');
+    const btnEn = document.getElementById('btn-en');
+    const langFr = document.querySelectorAll('.lang-fr');
+    const langEn = document.querySelectorAll('.lang-en');
 
-        function setLanguage(lang) {
-            if (lang === 'fr') {
-                langFrElements.forEach(el => el.classList.remove('lang-hidden'));
-                langEnElements.forEach(el => el.classList.add('lang-hidden'));
-                btnFr.classList.add('active');
-                btnEn.classList.remove('active');
-            } else {
-                langFrElements.forEach(el => el.classList.add('lang-hidden'));
-                langEnElements.forEach(el => el.classList.remove('lang-hidden'));
-                btnEn.classList.add('active');
-                btnFr.classList.remove('active');
-            }
+    function setLanguage(lang) {
+        if (lang === 'fr') {
+            langFr.forEach(el => el.classList.remove('lang-hidden'));
+            langEn.forEach(el => el.classList.add('lang-hidden'));
+            btnFr.classList.add('active');
+            btnEn.classList.remove('active');
+        } else {
+            langFr.forEach(el => el.classList.add('lang-hidden'));
+            langEn.forEach(el => el.classList.remove('lang-hidden'));
+            btnEn.classList.add('active');
+            btnFr.classList.remove('active');
         }
+    }
+    btnFr.addEventListener('click', () => setLanguage('fr'));
+    btnEn.addEventListener('click', () => setLanguage('en'));
+    // option navigateur
+    if ((navigator.language || '').substring(0,2) === 'en') setLanguage('en');
 
-        btnFr.addEventListener('click', () => setLanguage('fr'));
-        btnEn.addEventListener('click', () => setLanguage('en'));
+    // ---------- LIGHTBOX pour images et placeholders ----------
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
 
-        // détection navigateur simple ? on laisse français par défaut (déjà actif)
-        // mais si l'utilisateur a le navigateur en anglais on peut switcher?
-        // optionnel : 
-        const browserLang = (navigator.language || navigator.userLanguage).substring(0,2);
-        if (browserLang === 'en') setLanguage('en');
-    })();
+    // ouvrir lightbox sur clic d'une image ou d'un placeholder
+    document.querySelectorAll('.carousel-img, .img-placeholder').forEach(el => {
+        el.addEventListener('click', function(e) {
+            e.stopPropagation();
+            let imgUrl = null;
+            // si c'est une image
+            if (this.tagName === 'IMG') {
+                imgUrl = this.src;
+            } 
+            // si c'est un placeholder, on prend une image par défaut ou on crée une vignette svg? on utilise une icône
+            else if (this.classList.contains('img-placeholder')) {
+                // on peut générer un canvas dataURL simple, mais on va plutôt afficher un message sympa
+                // on va mettre une image interne "placeholder" textuelle ? ou un SVG
+                // pour rester propre : on utilise le même placeholder mais en lightbox on met une fausse image de type "carte"
+                imgUrl = 'https://placecats.com/800/600?random=' + Date.now();  // fallback sympa
+            }
+            if (imgUrl) {
+                lightboxImg.src = imgUrl;
+                lightbox.classList.add('active');
+            }
+        });
+    });
+
+    // fermer lightbox
+    window.lightboxClose = function(event) {
+        // si on clique sur l'overlay ou le bouton close
+        lightbox.classList.remove('active');
+        lightboxImg.src = ''; // vide pour éviter affichage fantôme
+    };
+
+    // empêcher la fermeture si clic sur l'image elle-même
+    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
 </script>
-<!-- placeholder images : placecats.com (libre) ; les images réelles seront à remplacer -->
 </body>
 </html>
