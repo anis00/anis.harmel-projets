@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anis HARMEL · Portfolio QGIS</title>
+    <title>Anis HARMEL · Portfolio QGIS (Détails Complets)</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts: Inter -->
@@ -22,7 +22,6 @@
             background: #f5f9fc;
             color: #1a2b3c;
             line-height: 1.5;
-            scroll-behavior: smooth;
         }
 
         .container {
@@ -64,7 +63,7 @@
             padding: 2rem 2.5rem;
             margin-bottom: 2.5rem;
             box-shadow: 0 12px 30px rgba(0,30,50,0.08);
-            border: 1px solid rgba(60, 130, 190, 0.15);
+            border: 1px solid rgba(60,130,190,0.15);
         }
 
         .name-title h1 {
@@ -111,7 +110,6 @@
             color: #0b3b5c;
             text-decoration: none;
             font-weight: 500;
-            border-bottom: 1px dotted transparent;
         }
 
         .contact-item a:hover {
@@ -155,7 +153,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
         .project-title {
@@ -179,6 +177,17 @@
             color: #1479b3;
         }
 
+        .role-org {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a5a7a;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background: #ecf5fc;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
         .objective {
             background: #f1f7fd;
             padding: 1.2rem 1.5rem;
@@ -187,11 +196,21 @@
             border: 1px solid #cde3f0;
         }
 
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0b3f5c;
+            margin: 1.5rem 0 1rem 0;
+            border-bottom: 3px solid #3b8fc2;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
         .resp-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.7rem;
+            gap: 0.9rem;
         }
 
         .resp-list li {
@@ -205,6 +224,7 @@
             font-size: 1.1rem;
             min-width: 1.5rem;
             text-align: center;
+            margin-top: 3px;
         }
 
         .tech-badge {
@@ -227,7 +247,7 @@
             background: #dff0f9;
             padding: 1.2rem 1.6rem;
             border-radius: 1.5rem;
-            margin: 1.2rem 0 1.8rem;
+            margin: 1.5rem 0 0.5rem;
             border-left: 6px solid #197bbd;
         }
 
@@ -269,7 +289,6 @@
             border-radius: 20px;
         }
 
-        /* images cliquables style */
         .carousel-img {
             height: 200px;
             width: auto;
@@ -280,12 +299,11 @@
             object-fit: cover;
             flex-shrink: 0;
             cursor: pointer;
-            transition: filter 0.2s, transform 0.2s;
+            transition: filter 0.2s;
         }
 
         .carousel-img:hover {
             filter: brightness(0.95);
-            transform: scale(1.02);
         }
 
         .img-placeholder {
@@ -358,15 +376,13 @@
             justify-content: center;
             cursor: pointer;
             transition: 0.2s;
-            border: none;
         }
 
         .lightbox-close:hover {
-            background: rgba(180, 0, 0, 0.7);
+            background: rgba(180,0,0,0.7);
             transform: scale(1.1);
         }
 
-        /* footer + lang switch */
         .footer-note {
             text-align: center;
             margin-top: 3rem;
@@ -383,6 +399,8 @@
             .container { padding: 1rem; }
             .name-title h1 { font-size: 2rem; }
             .contact-bar { flex-direction: column; }
+            .project-header { flex-direction: column; }
+            .project-meta { align-self: flex-start; }
         }
     </style>
 </head>
@@ -416,37 +434,86 @@
         </div>
     </div>
 
-    <!-- intro FR/EN -->
-    <div class="intro-text lang-fr"><i class="fas fa-map" style="margin-right:12px;color:#1b6a9e;"></i> Ce portfolio présente les projets clés SIG que j'ai dirigés, principalement avec QGIS et les technologies open-source. Plus de 17 ans d'expérience, dont Chef du Service SIG à l'ONAS.</div>
-    <div class="intro-text lang-en lang-hidden"><i class="fas fa-map" style="margin-right:12px;color:#1b6a9e;"></i> This portfolio showcases key GIS projects I led, primarily using QGIS and open-source technologies. 17+ years of experience, including Head of GIS at ONAS.</div>
+    <!-- INTRO FR -->
+    <div class="intro-text lang-fr">
+        <i class="fas fa-map" style="margin-right:12px;color:#1b6a9e;"></i> 
+        Ce portfolio présente les projets clés de Systèmes d'Information Géographique (SIG) que j'ai dirigés et auxquels j'ai contribué, en utilisant principalement QGIS et les technologies géospatiales open-source associées. Avec plus de 17 ans d'expérience dans le domaine, dont une période significative en tant que Chef de Service SIG à l'Office National de l'Assainissement (ONAS), mon travail s'est concentré sur le développement d'infrastructures de données spatiales robustes, la mise en œuvre de solutions cartographiques innovantes et la prise de décision basée sur les données dans le secteur de l'eau et de l'assainissement. Ces projets mettent en évidence mon expertise en gestion de données spatiales, en analyse avancée, en développement de Web SIG et en flux de travail de collecte de données mobiles.
+    </div>
+    <!-- INTRO EN -->
+    <div class="intro-text lang-en lang-hidden">
+        <i class="fas fa-map" style="margin-right:12px;color:#1b6a9e;"></i> 
+        This portfolio showcases key Geographic Information System (GIS) projects I have led and contributed to, primarily utilizing QGIS and related open-source geospatial technologies. With over 17 years of experience in the field, including a significant tenure as Head of GIS at the National Office for Sanitation (ONAS), my work has focused on developing robust spatial data infrastructures, implementing innovative mapping solutions, and driving data-driven decision-making in the water and sanitation sector. These projects highlight my expertise in spatial data management, advanced analysis, web GIS development, and mobile data collection workflows.
+    </div>
 
-    <!-- PROJETS  -->
+    <!-- PROJECT GRID -->
     <div class="project-grid">
 
-        <!-- PROJET 1 -->
+        <!-- ========== PROJET 1 ========== -->
         <div class="project-card">
             <div class="project-content">
                 <!-- FR -->
                 <div class="lang-fr">
-                    <div class="project-header"><span class="project-title">📌 Intégration SIG du Réseau National</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mars 2014 – Présent</span><span><i class="fas fa-user-tie"></i> Chef Service SIG</span></div></div>
-                    <div class="objective"><i class="fas fa-bullseye" style="margin-right:12px;"></i> Établir un SIG complet pour le réseau national d'assainissement.</div>
-                    <ul class="resp-list"><li><i class="fas fa-database"></i> Acquisition/intégration, nettoyage, validation.</li><li><i class="fas fa-project-diagram"></i> Conception PostgreSQL/PostGIS.</li><li><i class="fas fa-map-marked-alt"></i> Organisation de levés topographiques.</li><li><i class="fas fa-code"></i> Modèles PyQGIS pour automatisation.</li><li><i class="fas fa-chalkboard-teacher"></i> Formation 50+ utilisateurs.</li></ul>
-                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">PyQGIS</span><span class="tech-item">AutoCAD</span></div>
-                    <div class="impact"><i class="fas fa-chart-line"></i> Impact : efficacité, coûts réduits, planification optimisée.</div>
+                    <div class="project-header">
+                        <span class="project-title">🚰 Intégration SIG du Réseau National d'Assainissement</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mars 2014 – Présent</span></div>
+                    </div>
+                    <div class="role-org"><i class="fas fa-user-tie"></i> Chef de Service SIG / Chef de Projet Géomatique · ONAS Tunisie</div>
+                    
+                    <div class="section-title">Objectif</div>
+                    <div class="objective">Établir un Système d'Information Géographique complet et unifié pour l'ensemble du réseau national d'assainissement, permettant une gestion, une planification et une maintenance efficaces des infrastructures.</div>
+                    
+                    <div class="section-title">Responsabilités et Actions Clés</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-database"></i> <strong>Acquisition et Intégration de Données :</strong> J'ai dirigé la numérisation et l'intégration de milliers de kilomètres de réseaux d'assainissement, y compris les conduites, les stations de pompage et les stations d'épuration, dans une base de données SIG centralisée. Cela a impliqué des processus approfondis de nettoyage, de validation et de transformation des données.</li>
+                        <li><i class="fas fa-project-diagram"></i> <strong>Conception et Gestion de Bases de Données :</strong> J'ai conçu et mis en œuvre la structure de la base de données géographique (PostgreSQL/PostGIS) pour stocker et gérer diverses données spatiales et alphanumériques liées au réseau d'assainissement. J'ai assuré la qualité, la cohérence et l'interopérabilité des données.</li>
+                        <li><i class="fas fa-map-marked-alt"></i> <strong>Coordination des Levés Topographiques :</strong> J'ai organisé et supervisé de nombreuses campagnes de levés topographiques pour acquérir des données spatiales précises pour les mises à jour du réseau et la planification de nouvelles infrastructures.</li>
+                        <li><i class="fas fa-code"></i> <strong>QGIS pour le Traitement et l'Analyse de Données :</strong> J'ai utilisé QGIS de manière extensive pour le traitement des données, l'analyse spatiale et la production cartographique. J'ai développé des modèles et des scripts QGIS personnalisés (PyQGIS) pour automatiser la validation des données et générer des cartes thématiques pour la planification opérationnelle et stratégique.</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> <strong>Formation et Support Utilisateurs :</strong> J'ai assuré la formation et le support continu de plus de 50 utilisateurs dans divers départements, favorisant une forte culture géomatique au sein de l'organisation et garantissant une utilisation efficace du SIG.</li>
+                    </ul>
+                    
+                    <div class="section-title">Technologies Utilisées</div>
+                    <div class="tech-badge">
+                        <span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">ArcGIS</span>
+                        <span class="tech-item">Python (PyQGIS)</span><span class="tech-item">AutoCAD</span><span class="tech-item">Mensura Genius</span>
+                    </div>
+                    
+                    <div class="section-title">Impact</div>
+                    <div class="impact">Le projet a entraîné une amélioration significative de l'efficacité de la gestion du réseau, une réduction des coûts opérationnels grâce à une planification optimisée de la maintenance et une amélioration des capacités de prise de décision pour les projets de développement et de réhabilitation des infrastructures.</div>
                 </div>
                 <!-- EN -->
                 <div class="lang-en lang-hidden">
-                    <div class="project-header"><span class="project-title">📌 National Sanitation Network GIS</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Mar 2014 – Present</span><span><i class="fas fa-user-tie"></i> Head of GIS</span></div></div>
-                    <div class="objective"><i class="fas fa-bullseye"></i> Unified GIS for national sanitation network.</div>
-                    <ul class="resp-list"><li><i class="fas fa-database"></i> Data acquisition, cleaning, validation.</li><li><i class="fas fa-project-diagram"></i> PostgreSQL/PostGIS design.</li><li><i class="fas fa-map-marked-alt"></i> Topographic surveys.</li><li><i class="fas fa-code"></i> PyQGIS automation.</li><li><i class="fas fa-chalkboard-teacher"></i> Trained 50+ users.</li></ul>
-                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">PyQGIS</span><span class="tech-item">AutoCAD</span></div>
-                    <div class="impact"><i class="fas fa-chart-line"></i> Impact: efficiency, reduced costs.</div>
+                    <div class="project-header">
+                        <span class="project-title">🚰 National Sanitation Network GIS Integration</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> March 2014 – Present</span></div>
+                    </div>
+                    <div class="role-org"><i class="fas fa-user-tie"></i> Head of GIS / Geomatics Project Manager · ONAS Tunisia</div>
+                    
+                    <div class="section-title">Objective</div>
+                    <div class="objective">To establish a comprehensive and unified Geographic Information System for the entire national sanitation network, enabling efficient management, planning, and maintenance of infrastructure assets.</div>
+                    
+                    <div class="section-title">Key Responsibilities & Actions</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-database"></i> <strong>Data Acquisition & Integration:</strong> Led the digitization and integration of thousands of kilometers of sanitation networks, including pipes, pumping stations, and treatment plants, into a centralized GIS database. This involved extensive data cleaning, validation, and transformation processes.</li>
+                        <li><i class="fas fa-project-diagram"></i> <strong>Database Design & Management:</strong> Designed and implemented the geographic database structure (PostgreSQL/PostGIS) to store and manage diverse spatial and alphanumeric data related to the sanitation network. Ensured data quality, consistency, and interoperability.</li>
+                        <li><i class="fas fa-map-marked-alt"></i> <strong>Topographic Survey Coordination:</strong> Organized and supervised numerous topographic survey campaigns to acquire precise spatial data for network updates and new infrastructure planning.</li>
+                        <li><i class="fas fa-code"></i> <strong>QGIS for Data Processing & Analysis:</strong> Utilized QGIS extensively for data processing, spatial analysis, and cartographic production. Developed custom QGIS models and scripts (PyQGIS) to automate data validation and generate thematic maps for operational and strategic planning.</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> <strong>User Training & Support:</strong> Provided training and ongoing support to over 50 users across various departments, fostering a strong geomatics culture within the organization and ensuring effective utilization of the GIS.</li>
+                    </ul>
+                    
+                    <div class="section-title">Technologies Used</div>
+                    <div class="tech-badge">
+                        <span class="tech-item">QGIS</span><span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">ArcGIS</span>
+                        <span class="tech-item">Python (PyQGIS)</span><span class="tech-item">AutoCAD</span><span class="tech-item">Mensura Genius</span>
+                    </div>
+                    
+                    <div class="section-title">Impact</div>
+                    <div class="impact">The project resulted in a significant improvement in the efficiency of network management, reduced operational costs through optimized maintenance planning, and enhanced decision-making capabilities for infrastructure development and rehabilitation projects.</div>
                 </div>
             </div>
-            <!-- carousel 1 : toutes les images sont cliquables -->
+            <!-- CAROUSEL PROJET 1 -->
             <div class="carousel-section">
-                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus du projet</span><span class="lang-en lang-hidden">Snapshots</span></div>
-                <div class="scrolling-wrapper" data-project="1">
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus du projet</span><span class="lang-en lang-hidden">Project snapshots</span></div>
+                <div class="scrolling-wrapper">
                     <img class="carousel-img" src="images/projet1/094723.jpg" alt="capture">
                     <img class="carousel-img" src="images/projet1/093417.jpg" alt="capture">
                     <img class="carousel-img" src="images/projet1/093332.jpg" alt="capture">
@@ -454,26 +521,69 @@
             </div>
         </div>
 
-        <!-- PROJET 2 : mobile -->
+        <!-- ========== PROJET 2 ========== -->
         <div class="project-card">
             <div class="project-content">
+                <!-- FR -->
                 <div class="lang-fr">
-                    <div class="project-header"><span class="project-title">📱 Application Mobile – Collecte Abonnés</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Déc 2023 – Mars 2024</span><span><i class="fas fa-user-cog"></i> Chef SIG / Dev</span></div></div>
-                    <div class="objective">Développer une app mobile pour géolocaliser les données abonnés (codes activité, pollution).</div>
-                    <ul class="resp-list"><li><i class="fas fa-mobile-alt"></i> Conception QField / QGIS.</li><li><i class="fas fa-wpforms"></i> Formulaires dynamiques.</li><li><i class="fas fa-exchange-alt"></i> Workflows QML/JS, QFieldSync.</li><li><i class="fas fa-database"></i> Gestion SQLite.</li></ul>
-                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span><span class="tech-item">QML/JS</span></div>
-                    <div class="impact">Impact: collecte rationalisée, précision améliorée.</div>
+                    <div class="project-header">
+                        <span class="project-title">📱 Application Mobile de Collecte de Données pour les Abonnés de l'ONAS</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Décembre 2023 – Mars 2024</span></div>
+                    </div>
+                    <div class="role-org"><i class="fas fa-user-cog"></i> Chef de Service SIG / Développeur · ONAS Tunisie</div>
+                    
+                    <div class="section-title">Objectif</div>
+                    <div class="objective">Développer et déployer une application mobile pour les agents de terrain afin de géolocaliser et collecter les données des abonnés, y compris les codes d'activité et les coefficients de pollution, améliorant ainsi la précision et la rapidité des informations clients.</div>
+                    
+                    <div class="section-title">Responsabilités et Actions Clés</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-mobile-alt"></i> <strong>Développement SIG Mobile :</strong> J'ai conçu et mis en œuvre une application mobile de collecte de données utilisant QField, intégrée à QGIS, pour permettre aux agents de saisir des informations géolocalisées directement sur le terrain.</li>
+                        <li><i class="fas fa-wpforms"></i> <strong>Création de Formulaires Dynamiques :</strong> J'ai développé des formulaires dynamiques et intuitifs au sein de QField, adaptés au format de la base de données d'abonnés existante, pour faciliter la saisie et la correction des données.</li>
+                        <li><i class="fas fa-exchange-alt"></i> <strong>Automatisation des Flux de Travail :</strong> J'ai mis en œuvre des flux de travail QML/JavaScript pour améliorer les processus de collecte de données et assurer une synchronisation transparente des données collectées via QFieldSync.</li>
+                        <li><i class="fas fa-database"></i> <strong>Gestion et Synchronisation des Données :</strong> J'ai géré la base de données SQLite sur les appareils mobiles et assuré l'exportation et la synchronisation efficaces des données avec la base de données SIG centrale.</li>
+                    </ul>
+                    
+                    <div class="section-title">Technologies Utilisées</div>
+                    <div class="tech-badge">
+                        <span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span>
+                        <span class="tech-item">QML/JavaScript</span><span class="tech-item">QFieldSync</span>
+                    </div>
+                    
+                    <div class="section-title">Impact</div>
+                    <div class="impact">Ce projet a considérablement rationalisé le processus de collecte de données, amélioré la précision des informations sur les abonnés et accru l'efficacité des opérations sur le terrain, ce qui a conduit à un meilleur service client et à une facturation plus précise.</div>
                 </div>
+                <!-- EN -->
                 <div class="lang-en lang-hidden">
-                    <div class="project-header"><span class="project-title">📱 Mobile Subscriber Collection</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Dec 2023 – Mar 2024</span><span><i class="fas fa-user-cog"></i> Head of GIS / Dev</span></div></div>
-                    <div class="objective">Mobile app to geolocate subscriber data.</div>
-                    <ul class="resp-list"><li><i class="fas fa-mobile-alt"></i> QField / QGIS design.</li><li><i class="fas fa-wpforms"></i> Dynamic forms.</li><li><i class="fas fa-exchange-alt"></i> QML/JS, QFieldSync.</li><li><i class="fas fa-database"></i> SQLite management.</li></ul>
-                    <div class="tech-badge"><span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span><span class="tech-item">QML/JS</span></div>
-                    <div class="impact">Impact: streamlined collection, accuracy.</div>
+                    <div class="project-header">
+                        <span class="project-title">📱 Mobile Application for ONAS Subscriber Data Collection</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> December 2023 – March 2024</span></div>
+                    </div>
+                    <div class="role-org"><i class="fas fa-user-cog"></i> Head of GIS / Developer · ONAS Tunisia</div>
+                    
+                    <div class="section-title">Objective</div>
+                    <div class="objective">To develop and deploy a mobile application for field agents to geolocate and collect subscriber data, including activity codes and pollution coefficients, thereby improving the accuracy and timeliness of customer information.</div>
+                    
+                    <div class="section-title">Key Responsibilities & Actions</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-mobile-alt"></i> <strong>Mobile GIS Development:</strong> Designed and implemented a mobile data collection application using QField, integrated with QGIS, to enable agents to capture geolocated information directly on-site.</li>
+                        <li><i class="fas fa-wpforms"></i> <strong>Dynamic Form Creation:</strong> Developed dynamic and intuitive forms within QField, adapted to the existing subscriber database format, to facilitate easy data entry and correction.</li>
+                        <li><i class="fas fa-exchange-alt"></i> <strong>Workflow Automation:</strong> Implemented QML/JavaScript workflows to enhance data collection processes and ensure seamless synchronization of collected data via QFieldSync.</li>
+                        <li><i class="fas fa-database"></i> <strong>Data Management & Synchronization:</strong> Managed the SQLite database on mobile devices and ensured efficient export and synchronization of data with the central GIS database.</li>
+                    </ul>
+                    
+                    <div class="section-title">Technologies Used</div>
+                    <div class="tech-badge">
+                        <span class="tech-item">QGIS</span><span class="tech-item">QField</span><span class="tech-item">SQLite</span>
+                        <span class="tech-item">QML/JavaScript</span><span class="tech-item">QFieldSync</span>
+                    </div>
+                    
+                    <div class="section-title">Impact</div>
+                    <div class="impact">This project significantly streamlined the data collection process, improved the accuracy of subscriber information, and enhanced the efficiency of field operations, leading to better customer service and more precise billing.</div>
                 </div>
             </div>
+            <!-- CAROUSEL PROJET 2 -->
             <div class="carousel-section">
-                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Aperçus terrain</span><span class="lang-en lang-hidden">Field views</span></div>
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Captures d'écran de l'application</span><span class="lang-en lang-hidden">App screenshots</span></div>
                 <div class="scrolling-wrapper">
                     <img class="carousel-img" src="images/projet2/qf1.jpg" alt="capture">
                     <img class="carousel-img" src="images/projet2/qf2.jpg" alt="capture">
@@ -484,26 +594,69 @@
             </div>
         </div>
 
-        <!-- PROJET 3 : Web mapping -->
+        <!-- ========== PROJET 3 ========== -->
         <div class="project-card">
             <div class="project-content">
+                <!-- FR -->
                 <div class="lang-fr">
-                    <div class="project-header"><span class="project-title">🦠 Suivi Épidémiologique (Lizmap)</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Sept 2022 – Fév 2023</span><span><i class="fas fa-user-nurse"></i> Chef SIG / Dev</span></div></div>
-                    <div class="objective">Application web pour localiser présence bactérienne (analyses STEP).</div>
-                    <ul class="resp-list"><li><i class="fas fa-globe"></i> Développement Lizmap, QGIS Server.</li><li><i class="fas fa-server"></i> PostGIS.</li><li><i class="fas fa-filter"></i> Filtrage dynamique.</li><li><i class="fas fa-handshake"></i> Ministères Santé/Agriculture.</li></ul>
-                    <div class="tech-badge"><span class="tech-item">Lizmap</span><span class="tech-item">QGIS Server</span><span class="tech-item">PostGIS</span><span class="tech-item">OpenLayers</span></div>
-                    <div class="impact">Impact: outil de surveillance sanitaire.</div>
+                    <div class="project-header">
+                        <span class="project-title">🦠 Système de Suivi Épidémiologique pour le Réseau ONAS</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Septembre 2022 – Février 2023</span></div>
+                    </div>
+                    <div class="role-org"><i class="fas fa-user-nurse"></i> Chef de Service SIG / Développeur · ONAS Tunisie</div>
+                    
+                    <div class="section-title">Objectif</div>
+                    <div class="objective">Développer une application cartographique web pour le suivi épidémiologique, permettant la localisation de la présence bactérienne potentielle dans les eaux usées sur la base des résultats d'analyse des stations d'épuration et des stations de pompage.</div>
+                    
+                    <div class="section-title">Responsabilités et Actions Clés</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-globe"></i> <strong>Développement Web SIG :</strong> J'ai conçu et développé une application cartographique web utilisant Lizmap, installée sur un serveur cartographique avec QGIS Server, et configurée via le plugin Lizmap pour QGIS.</li>
+                        <li><i class="fas fa-server"></i> <strong>Gestion des Données Spatiales :</strong> J'ai géré et stocké les données cartographiques et analytiques dans une base de données spatiale PostgreSQL – PostGIS, assurant une récupération et un affichage efficaces des données.</li>
+                        <li><i class="fas fa-filter"></i> <strong>Filtrage Dynamique et Visualisation :</strong> J'ai mis en œuvre des fonctionnalités de filtrage et de traçage dynamiques pour visualiser des données épidémiologiques spécifiques sur la carte, permettant une identification rapide des zones affectées.</li>
+                        <li><i class="fas fa-handshake"></i> <strong>Collaboration et Intégration :</strong> J'ai collaboré avec le Ministère de la Santé et le Ministère de l'Agriculture pour intégrer les données pertinentes et garantir que le système répondait aux exigences de surveillance de la santé publique.</li>
+                    </ul>
+                    
+                    <div class="section-title">Technologies Utilisées</div>
+                    <div class="tech-badge">
+                        <span class="tech-item">Lizmap</span><span class="tech-item">QGIS</span><span class="tech-item">QGIS Server</span>
+                        <span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">OpenLayers</span>
+                    </div>
+                    
+                    <div class="section-title">Impact</div>
+                    <div class="impact">Le système a fourni un outil crucial pour la surveillance de la santé publique, permettant une identification et une réponse rapides aux risques épidémiologiques potentiels au sein du réseau d'eaux usées, contribuant ainsi à la sécurité publique et à la protection de l'environnement.</div>
                 </div>
+                <!-- EN -->
                 <div class="lang-en lang-hidden">
-                    <div class="project-header"><span class="project-title">🦠 Epidemiological Monitoring</span><div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Sep 2022 – Feb 2023</span><span><i class="fas fa-user-nurse"></i> Head of GIS / Dev</span></div></div>
-                    <div class="objective">Web app to track bacterial presence (wastewater).</div>
-                    <ul class="resp-list"><li><i class="fas fa-globe"></i> Lizmap, QGIS Server.</li><li><i class="fas fa-server"></i> PostGIS.</li><li><i class="fas fa-filter"></i> Dynamic filtering.</li><li><i class="fas fa-handshake"></i> Ministries collaboration.</li></ul>
-                    <div class="tech-badge"><span class="tech-item">Lizmap</span><span class="tech-item">QGIS Server</span><span class="tech-item">PostGIS</span><span class="tech-item">OpenLayers</span></div>
-                    <div class="impact">Impact: public health monitoring.</div>
+                    <div class="project-header">
+                        <span class="project-title">🦠 Epidemiological Monitoring System for ONAS Network</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> September 2022 – February 2023</span></div>
+                    </div>
+                    <div class="role-org"><i class="fas fa-user-nurse"></i> Head of GIS / Developer · ONAS Tunisia</div>
+                    
+                    <div class="section-title">Objective</div>
+                    <div class="objective">To develop a web-based cartographic application for epidemiological monitoring, enabling the localization of potential bacterial presence in wastewater based on analysis results from treatment plants and pumping stations.</div>
+                    
+                    <div class="section-title">Key Responsibilities & Actions</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-globe"></i> <strong>Web GIS Development:</strong> Designed and developed a web cartographic application using Lizmap, installed on a map server with QGIS Server, and configured via the Lizmap plugin for QGIS.</li>
+                        <li><i class="fas fa-server"></i> <strong>Spatial Data Management:</strong> Managed and stored cartographic and analytical data in a PostgreSQL – PostGIS spatial database, ensuring efficient data retrieval and display.</li>
+                        <li><i class="fas fa-filter"></i> <strong>Dynamic Data Filtering & Visualization:</strong> Implemented dynamic filtering and tracing functionalities to visualize specific epidemiological data on the map, allowing for quick identification of affected areas.</li>
+                        <li><i class="fas fa-handshake"></i> <strong>Collaboration & Integration:</strong> Collaborated with the Ministry of Health and the Ministry of Agriculture to integrate relevant data and ensure the system met public health monitoring requirements.</li>
+                    </ul>
+                    
+                    <div class="section-title">Technologies Used</div>
+                    <div class="tech-badge">
+                        <span class="tech-item">Lizmap</span><span class="tech-item">QGIS</span><span class="tech-item">QGIS Server</span>
+                        <span class="tech-item">PostgreSQL/PostGIS</span><span class="tech-item">OpenLayers</span>
+                    </div>
+                    
+                    <div class="section-title">Impact</div>
+                    <div class="impact">The system provided a crucial tool for public health monitoring, enabling rapid identification and response to potential epidemiological risks within the wastewater network, thereby contributing to public safety and environmental protection.</div>
                 </div>
             </div>
+            <!-- CAROUSEL PROJET 3 -->
             <div class="carousel-section">
-                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Visualisations web</span><span class="lang-en lang-hidden">Web views</span></div>
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Interface web et cartes</span><span class="lang-en lang-hidden">Web interface & maps</span></div>
                 <div class="scrolling-wrapper">
                     <img class="carousel-img" src="images/projet3/100901.jpg" alt="capture">
 					<img class="carousel-img" src="images/projet3/100730.jpg" alt="capture">
@@ -514,20 +667,35 @@
         </div>
     </div>
 
-    <!-- footer bilingue -->
-    <div class="footer-note lang-fr"><i class="fas fa-copyright"></i> Anis HARMEL – Portfolio QGIS · images cliquables pour agrandir</div>
-    <div class="footer-note lang-en lang-hidden"><i class="fas fa-copyright"></i> Anis HARMEL – QGIS Portfolio · click images to enlarge</div>
+    <!-- CONCLUSION FR/EN -->
+    <div class="intro-text" style="margin-top: 2rem; background: #e0eff9;">
+        <div class="lang-fr">
+            <i class="fas fa-star" style="margin-right:12px;color:#1b6a9e;"></i>
+            <strong>Conclusion :</strong> Ces projets démontrent mon expertise complète en QGIS et dans les technologies géospatiales associées, de la gestion et de l'analyse des données fondamentales au développement d'applications web et mobiles avancées. Ma capacité à diriger des projets complexes, à innover avec des outils open-source et à fournir des solutions percutantes s'aligne parfaitement avec les exigences d'un rôle d'expert QGIS axé sur l'avancement de la technologie d'analyse spatiale. Je suis confiant dans ma capacité à apporter une contribution significative à votre équipe et à développer davantage de solutions géospatiales de pointe.
+        </div>
+        <div class="lang-en lang-hidden">
+            <i class="fas fa-star" style="margin-right:12px;color:#1b6a9e;"></i>
+            <strong>Conclusion:</strong> These projects demonstrate my comprehensive expertise in QGIS and related geospatial technologies, from foundational data management and analysis to advanced web and mobile application development. My ability to lead complex projects, innovate with open-source tools, and deliver impactful solutions aligns perfectly with the requirements of a QGIS Expert role focused on advancing spatial analysis technology. I am confident in my capacity to contribute significantly to your team and to further develop cutting-edge geospatial solutions.
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer-note lang-fr">
+        <i class="fas fa-copyright"></i> Anis HARMEL – Portfolio de Projets QGIS · Tous les détails sont issus des documents originaux
+    </div>
+    <div class="footer-note lang-en lang-hidden">
+        <i class="fas fa-copyright"></i> Anis HARMEL – QGIS Project Portfolio · All details from original documents
+    </div>
 </div>
 
-<!-- LIGHTBOX HTML -->
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox-overlay" onclick="lightboxClose(event)">
     <img id="lightbox-img" class="lightbox-content" src="" alt="">
     <div class="lightbox-close" onclick="lightboxClose(event)"><i class="fas fa-times"></i></div>
 </div>
 
-<!-- SCRIPT : langue + lightbox -->
 <script>
-    // ---------- langue ----------
+    // Langue
     const btnFr = document.getElementById('btn-fr');
     const btnEn = document.getElementById('btn-en');
     const langFr = document.querySelectorAll('.lang-fr');
@@ -548,28 +716,20 @@
     }
     btnFr.addEventListener('click', () => setLanguage('fr'));
     btnEn.addEventListener('click', () => setLanguage('en'));
-    // option navigateur
     if ((navigator.language || '').substring(0,2) === 'en') setLanguage('en');
 
-    // ---------- LIGHTBOX pour images et placeholders ----------
+    // Lightbox
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-
-    // ouvrir lightbox sur clic d'une image ou d'un placeholder
+    
     document.querySelectorAll('.carousel-img, .img-placeholder').forEach(el => {
         el.addEventListener('click', function(e) {
             e.stopPropagation();
             let imgUrl = null;
-            // si c'est une image
             if (this.tagName === 'IMG') {
                 imgUrl = this.src;
-            } 
-            // si c'est un placeholder, on prend une image par défaut ou on crée une vignette svg? on utilise une icône
-            else if (this.classList.contains('img-placeholder')) {
-                // on peut générer un canvas dataURL simple, mais on va plutôt afficher un message sympa
-                // on va mettre une image interne "placeholder" textuelle ? ou un SVG
-                // pour rester propre : on utilise le même placeholder mais en lightbox on met une fausse image de type "carte"
-                imgUrl = 'https://placecats.com/800/600?random=' + Date.now();  // fallback sympa
+            } else {
+                imgUrl = 'https://placecats.com/800/600?random=' + Date.now();
             }
             if (imgUrl) {
                 lightboxImg.src = imgUrl;
@@ -578,14 +738,10 @@
         });
     });
 
-    // fermer lightbox
     window.lightboxClose = function(event) {
-        // si on clique sur l'overlay ou le bouton close
         lightbox.classList.remove('active');
-        lightboxImg.src = ''; // vide pour éviter affichage fantôme
+        lightboxImg.src = '';
     };
-
-    // empêcher la fermeture si clic sur l'image elle-même
     lightboxImg.addEventListener('click', (e) => e.stopPropagation());
 </script>
 </body>
