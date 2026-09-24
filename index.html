@@ -251,6 +251,19 @@
             border-left: 6px solid #197bbd;
         }
 
+        /* avis client */
+        .client-review {
+            background: #ffffff;
+            padding: 1.2rem 1.6rem;
+            border-radius: 1.5rem;
+            margin: 1rem 0 0.5rem;
+            border: 1px solid #cde3f0;
+            font-style: italic;
+            color: #1e3a5f;
+        }
+        .client-review .stars { color: #e3a008; font-style: normal; margin-bottom: 0.4rem; }
+        .client-review .review-source { font-style: normal; font-size: 0.9rem; color: #4a6680; margin-top: 0.6rem; }
+
         /* carousel */
         .carousel-section {
             background: #f3f9ff;
@@ -437,16 +450,101 @@
     <!-- INTRO FR -->
     <div class="intro-text lang-fr">
         <i class="fas fa-map" style="margin-right:12px;color:#1b6a9e;"></i> 
-        Ce portfolio présente les projets clés de Systèmes d'Information Géographique (SIG) que j'ai dirigés et auxquels j'ai contribué, en utilisant principalement QGIS et les technologies géospatiales open-source associées. Avec plus de 17 ans d'expérience dans le domaine, dont une période significative en tant que Chef de Service SIG à l'Office National de l'Assainissement (ONAS), mon travail s'est concentré sur le développement d'infrastructures de données spatiales robustes, la mise en œuvre de solutions cartographiques innovantes et la prise de décision basée sur les données dans le secteur de l'eau et de l'assainissement. Ces projets mettent en évidence mon expertise en gestion de données spatiales, en analyse avancée, en développement de Web SIG et en flux de travail de collecte de données mobiles.
+        Ce portfolio présente les projets clés de Systèmes d'Information Géographique (SIG) que j'ai dirigés et auxquels j'ai contribué, en utilisant principalement QGIS et les technologies géospatiales open-source associées. Avec plus de 17 ans d'expérience dans le domaine, dont une période significative en tant que Chef de Service SIG à l'Office National de l'Assainissement (ONAS), mon travail s'est concentré sur le développement d'infrastructures de données spatiales robustes, la mise en œuvre de solutions cartographiques innovantes et la prise de décision basée sur les données dans le secteur de l'eau et de l'assainissement. Ces projets mettent en évidence mon expertise en gestion de données spatiales, en analyse avancée, en développement de Web SIG et en flux de travail de collecte de données mobiles. Il inclut également des missions freelance récentes en aménagement et lotissement, combinant analyse de terrain, conception de voirie et dimensionnement hydraulique.
     </div>
     <!-- INTRO EN -->
     <div class="intro-text lang-en lang-hidden">
         <i class="fas fa-map" style="margin-right:12px;color:#1b6a9e;"></i> 
-        This portfolio showcases key Geographic Information System (GIS) projects I have led and contributed to, primarily utilizing QGIS and related open-source geospatial technologies. With over 17 years of experience in the field, including a significant tenure as Head of GIS at the National Office for Sanitation (ONAS), my work has focused on developing robust spatial data infrastructures, implementing innovative mapping solutions, and driving data-driven decision-making in the water and sanitation sector. These projects highlight my expertise in spatial data management, advanced analysis, web GIS development, and mobile data collection workflows.
+        This portfolio showcases key Geographic Information System (GIS) projects I have led and contributed to, primarily utilizing QGIS and related open-source geospatial technologies. With over 17 years of experience in the field, including a significant tenure as Head of GIS at the National Office for Sanitation (ONAS), my work has focused on developing robust spatial data infrastructures, implementing innovative mapping solutions, and driving data-driven decision-making in the water and sanitation sector. These projects highlight my expertise in spatial data management, advanced analysis, web GIS development, and mobile data collection workflows. It also includes recent freelance work in land development and subdivision planning, combining terrain analysis, road layout and hydraulic design.
     </div>
 
     <!-- PROJECT GRID -->
     <div class="project-grid">
+
+        <!-- ========== PROJET 4 : LOTISSEMENT RURAL (AUSTRALIE) ========== -->
+        <div class="project-card">
+            <div class="project-content">
+                <!-- FR -->
+                <div class="lang-fr">
+                    <div class="project-header">
+                        <span class="project-title">🏞️ Plan Conceptuel de Lotissement Rural – Northern NSW, Australie</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> Août – Septembre 2026</span></div>
+                    </div>
+                    <div class="role-org"><i class="fas fa-user-tie"></i> Ingénieur civil & aménagement (freelance) · Client Upwork, Australie</div>
+
+                    <div class="section-title">Objectif</div>
+                    <div class="objective">Concevoir le plan de lotissement d'une propriété rurale d'environ 1 205 ha (zone RU2 Rural Landscape) afin d'appuyer la réunion de pré-dépôt du client avec le conseil municipal.</div>
+
+                    <div class="section-title">Responsabilités et Actions Clés</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-mountain"></i> <strong>Analyse du terrain :</strong> Analyse topographique et cartographie des pentes pour délimiter les zones constructibles, limitées aux terrains de pente inférieure à 20 %.</li>
+                        <li><i class="fas fa-draw-polygon"></i> <strong>Découpage parcellaire :</strong> Conception de 25 lots d'une superficie minimale de 42,5 ha, conformes aux exigences du zonage.</li>
+                        <li><i class="fas fa-road"></i> <strong>Voirie et sécurité incendie :</strong> Tracé d'un réseau de routes en boucle et intégration de coupe-feux de 8 m.</li>
+                        <li><i class="fas fa-water"></i> <strong>Hydraulique :</strong> Dimensionnement de 6 ponceaux routiers par la méthode rationnelle, à partir des données pluviométriques IFD du Bureau of Meteorology (BOM).</li>
+                        <li><i class="fas fa-cube"></i> <strong>Livrables :</strong> Projet QGIS, plan PDF, modèle 3D interactif (HTML), shapefiles et rapport de métrés.</li>
+                    </ul>
+
+                    <div class="section-title">Technologies Utilisées</div>
+                    <div class="tech-badge">
+                        <span class="tech-item">QGIS</span><span class="tech-item">Analyse de pentes / MNT</span><span class="tech-item">Méthode rationnelle</span>
+                        <span class="tech-item">Données IFD (BOM)</span><span class="tech-item">Modèle 3D HTML</span><span class="tech-item">Shapefiles</span>
+                    </div>
+
+                    <div class="section-title">Impact</div>
+                    <div class="impact">Le plan a servi de base à la réunion de pré-dépôt du client avec le conseil municipal. Le projet a été clôturé avec un avis client de 5 étoiles.</div>
+                    <div class="client-review">
+                        <div class="stars">★★★★★ <span style="color:#4a6680;font-size:0.9rem;">Avis client Upwork</span></div>
+                        « Phenomenal help... Professional, efficient and a very clear communicator. Highly recommend and will certainly use Anis on future Development projects. »
+                        <div class="review-source">Entrepreneur en terrassement et promoteur, Australie</div>
+                    </div>
+                </div>
+                <!-- EN -->
+                <div class="lang-en lang-hidden">
+                    <div class="project-header">
+                        <span class="project-title">🏞️ Rural Subdivision Concept Plan – Northern NSW, Australia</span>
+                        <div class="project-meta"><span><i class="fas fa-calendar-alt"></i> August – September 2026</span></div>
+                    </div>
+                    <div class="role-org"><i class="fas fa-user-tie"></i> Civil & site planning engineer (freelance) · Upwork client, Australia</div>
+
+                    <div class="section-title">Objective</div>
+                    <div class="objective">To design a subdivision layout for a rural property of about 1,205 ha (RU2 Rural Landscape zone) supporting the client's pre-lodgement meeting with the local council.</div>
+
+                    <div class="section-title">Key Responsibilities & Actions</div>
+                    <ul class="resp-list">
+                        <li><i class="fas fa-mountain"></i> <strong>Terrain Analysis:</strong> Topographic and slope analysis to define building envelopes, restricted to land with slopes under 20%.</li>
+                        <li><i class="fas fa-draw-polygon"></i> <strong>Lot Layout:</strong> Designed 25 lots with a minimum area of 42.5 ha, in line with zoning requirements.</li>
+                        <li><i class="fas fa-road"></i> <strong>Roads & Bushfire Safety:</strong> Laid out a looped road network and integrated 8 m firebreaks.</li>
+                        <li><i class="fas fa-water"></i> <strong>Hydraulics:</strong> Sized 6 road culverts using the Rational Method and Bureau of Meteorology (BOM) IFD rainfall data.</li>
+                        <li><i class="fas fa-cube"></i> <strong>Deliverables:</strong> QGIS project, PDF layout plan, interactive 3D model (HTML), shapefiles and quantity report.</li>
+                    </ul>
+
+                    <div class="section-title">Technologies Used</div>
+                    <div class="tech-badge">
+                        <span class="tech-item">QGIS</span><span class="tech-item">Slope / DEM analysis</span><span class="tech-item">Rational Method</span>
+                        <span class="tech-item">BOM IFD data</span><span class="tech-item">3D HTML model</span><span class="tech-item">Shapefiles</span>
+                    </div>
+
+                    <div class="section-title">Impact</div>
+                    <div class="impact">The plan was used by the client as the basis for the pre-lodgement meeting with the local council. The project closed with a 5-star client review.</div>
+                    <div class="client-review">
+                        <div class="stars">★★★★★ <span style="color:#4a6680;font-size:0.9rem;">Upwork client review</span></div>
+                        "Phenomenal help... Professional, efficient and a very clear communicator. Highly recommend and will certainly use Anis on future Development projects."
+                        <div class="review-source">Earthworks contractor and developer, Australia</div>
+                    </div>
+                </div>
+            </div>
+            <!-- CAROUSEL PROJET 4 -->
+            <div class="carousel-section">
+                <div class="carousel-title"><i class="fas fa-camera-retro"></i> <span class="lang-fr">Plans et modèle 3D</span><span class="lang-en lang-hidden">Plans & 3D model</span></div>
+                <div class="scrolling-wrapper">
+                    <img class="carousel-img" src="images/projet4/plan-global.jpg" alt="Plan de lotissement global" onerror="this.style.display='none'">
+                    <img class="carousel-img" src="images/projet4/analyse-pentes.jpg" alt="Analyse des pentes" onerror="this.style.display='none'">
+                    <img class="carousel-img" src="images/projet4/routes-ponceaux.jpg" alt="Routes et ponceaux" onerror="this.style.display='none'">
+                    <img class="carousel-img" src="images/projet4/modele-3d.jpg" alt="Modèle 3D" onerror="this.style.display='none'">
+                    <img class="carousel-img" src="images/projet4/metres-ponceaux.jpg" alt="Métrés et calcul des ponceaux" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
 
         <!-- ========== PROJET 1 ========== -->
         <div class="project-card">
